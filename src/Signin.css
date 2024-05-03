@@ -1,0 +1,16 @@
+.signlogo{
+    width: 5rem;
+    height: 1.5rem;
+}
+*{
+    font-family: Friz Quadrata;
+}
+.inputno{
+    
+    border-top:none;
+    border-right: none;
+    border-left: none;
+}
+.head{
+    font-family: National2CondensedWeb-Medium;
+}
