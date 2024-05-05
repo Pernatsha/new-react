@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { Col, Button, Badge ,Stack} from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 function Signin() {
   const [mobno,setmobno]=useState("")
@@ -34,7 +35,12 @@ function Signin() {
                 label="Phone Number*"
                 className="mb-3 "
               >
-                <Form.Control type="text" placeholder="" value={mobno} onChange={updateno}/>
+                <Form.Control
+                  type="text"
+                  placeholder=""
+                  value={mobno}
+                  onChange={updateno}
+                />
               </FloatingLabel>
             </div>
             <p>
@@ -42,9 +48,9 @@ function Signin() {
               & Conditions.
             </p>
             <div className="text-center  mb-2 ">
-              
               <Button
-                variant="dark" type='submit'
+                variant="dark"
+                type="submit"
                 className="rounded-pill pt-3 ps-5 pe-5 pb-3"
               >
                 Send Me a Code
@@ -62,14 +68,16 @@ function Signin() {
               </Col>
             </Row>
             <div className="text-center ">
-              <Badge
-                pill
-                bg="light"
-                text="dark"
-                className="w-75 pt-4 pb-4 fs-6  border border-dark rounded-pill"
-              >
-                Skip, Continue As Guest
-              </Badge>
+              <Link to="/" className='text-decoration-none text-dark'>
+                <Badge
+                  pill
+                  bg="light"
+                  text="dark"
+                  className="w-75 pt-4 pb-4 fs-6  border border-dark rounded-pill"
+                >
+                  Skip, Continue As Guest
+                </Badge>
+              </Link>
             </div>
           </div>
         </Col>
