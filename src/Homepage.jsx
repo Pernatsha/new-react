@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import Headerbar from './Headerbar'
 import { Button, Container } from 'react-bootstrap';
 import './Homepage.css'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Carouselpage from './Carouselpage';
+import Footerbar from './Footerbar';
+import axios from 'axios';
+import Periperi from './Periperi';
 
 function Homepage() {
+  const [menudata, setmenudata] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:1101/menu/show").then((res) => {
+      // console.log("&#10625; &#10625");
+      setmenudata(res.data);
+    });
+  }, []);
+
+  
   return (
     <>
       <Headerbar />
@@ -53,112 +67,54 @@ function Homepage() {
               {" "}
               <Row className="container-sm mt-5 mb-5 pt-sm-5 pb-sm-3">
                 <Col xs={8} lg={5} md={6} sm={7} xl={4}>
-                  <span className="fs-3  browse ">
-                    BROWSE CATEGORIES
-                  </span>
+                  <span className="fs-3  browse ">BROWSE CATEGORIES</span>
                 </Col>
                 <Col className="d-none d-md-block ">
                   <hr />
                 </Col>
               </Row>
-              <Row xs={1} lg={4} md={3} className="  g-4">
-                <Col>
-                  <Card className="borderhead container-sm">
-                    <Card.Img variant="top" src="/CAT233.jpg" />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle text-center">
-                        PERI PERI CHICKEN
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="borderhead container-sm">
-                    <Card.Img variant="top" src="/CAT224.jpg" />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle  text-center">
-                        VALUE SNACKERS
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="borderhead container-sm">
-                    <Card.Img variant="top" src="/CAT170.jpg" />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle  text-center">
-                        CHICKEN ROLLS
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="borderhead container-sm">
-                    <Card.Img variant="top" src="/CAT86.jpg" />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle  text-center">
-                        CHICKEN BACKETS
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="borderhead container-sm">
-                    <Card.Img variant="top" src="/CAT190.jpg" />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle  text-center">
-                        BIRYANI BUCKETS
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="borderhead container-sm">
-                    <Card.Img variant="top" src="/CAT158.jpg" />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle  text-center">
-                        BOX MEALS
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="borderhead container-sm">
-                    <Card.Img variant="top" src="/CAT99.jpg" />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle  text-center">
-                        BURGERS
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="borderhead container-sm ">
-                    <Card.Img
-                      variant="top"
-                      src="/finger_lickin.fc21c805.svg"
-                      className="finger p-4 "
-                    />
-                    <Card.Body className="cardbg">
-                      <Card.Title className="hometitle fw-bold   text-center">
-                        View All Menu <span className=" ">&#10230;</span>
-                      </Card.Title>
-                      <Card.Text></Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
+              <div>
+                <Row xs={1} lg={4} md={3} className="  g-4">
+                  {menudata.map((v) => (
+                    <Col key={v.menuid}>
+                      <Card className="borderhead container-sm">
+                        <Card.Img variant="top" src={v.imgName} />
+                        <Card.Body className="cardbg">
+                          <Card.Title className="hometitle text-center">
+                            {v.menuName}
+                          </Card.Title>
+                          <Card.Text></Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                  <Col>
+                    <Card className="borderhead container-sm ">
+                      <Card.Img
+                        variant="top"
+                        src="/finger_lickin.fc21c805.svg"
+                        className="finger p-4 "
+                      />
+                      <Card.Body className="cardbg">
+                        <Card.Title className="hometitle fw-bold   text-center">
+                          View All Menu <span className=" ">&#10230;</span>
+                        </Card.Title>
+                        <Card.Text></Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </Row>
+              </div>
             </Col>
             <Col></Col>
           </Row>
         </div>
+      </div>
+      <div>
+        <Periperi/>
+        <Carouselpage />
+        
+        <Footerbar />
       </div>
     </>
   );

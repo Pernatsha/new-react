@@ -1,0 +1,14 @@
+.caro{
+    min-height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.slick-next{
+    right: -10vw !important;
+    
+}
+.slick-prev{
+    left: -10vw !important;
+}
+
