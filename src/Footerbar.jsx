@@ -10,16 +10,8 @@ import axios from 'axios'
 
 function Footerbar() {
   
-  
-
-
-
-  
   return (
     <>
-      
-
-     
       <div className="bg-black d-none d-lg-block pt-5 ">
         <Row className=" footersize w-100 mt-5 pt-5 mb-5    d-flex align-content-center ">
           <Col className="text-center">

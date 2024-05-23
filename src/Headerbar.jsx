@@ -23,8 +23,8 @@ function Headerbar() {
         </p>
         <Navbar expand="md" className=" ">
           <hr />
-          <Container fluid="md" className="pt-2 pb-3">
-            <Navbar.Brand href="#" className="ps-5 pb-4 ">
+          <Container fluid="md" className="pt-1 pb-2">
+            <Navbar.Brand href="/" className="ps-5 pb-4 ">
               <img src="/KFC-Logo-PNG.png" alt="" width={90} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
@@ -40,7 +40,7 @@ function Headerbar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className=" flex-grow-1 pe-3 pt-2  text-center  ">
-                  <Nav.Link href="#action1" className="fw-bold ps-md-5 headnav">
+                  <Nav.Link href="/menu" className="fw-bold ps-md-5 headnav">
                     Menu
                   </Nav.Link>
                   <Nav.Link href="#action2" className="fw-bold ps-md-5 headnav">

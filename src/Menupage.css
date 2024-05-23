@@ -1,0 +1,35 @@
+*{
+    scroll-behavior: smooth;
+}
+.target-scroll::-webkit-scrollbar{
+    appearance: none;
+}
+
+.menute{
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: condensed;
+    text-decoration: none;
+    color: black;
+}
+
+.menute:active{
+    color: red;
+}
+.menu-item{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input-search{
+    border: none;   
+}
+.input-search::placeholder {
+    color:black;
+    border:none;
+}
+.input-search:focus{
+    outline:none;
+}
+.border-search{
+    border: 1px solid rgb(120, 119, 119);
+
+}
+

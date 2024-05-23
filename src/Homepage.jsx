@@ -8,15 +8,21 @@ import Row from 'react-bootstrap/Row';
 import Carouselpage from './Carouselpage';
 import Footerbar from './Footerbar';
 import axios from 'axios';
-import Periperi from './Periperi';
+import { Link } from 'react-router-dom';
 
 function Homepage() {
   const [menudata, setmenudata] = useState([]);
+  const five= menudata.slice(0,7)
+  
+  
 
   useEffect(() => {
     axios.get("http://localhost:1101/menu/show").then((res) => {
-      // console.log("&#10625; &#10625");
+      console.log(res.data);
       setmenudata(res.data);
+      
+      // menuchange()
+      
     });
   }, []);
 
@@ -75,7 +81,7 @@ function Homepage() {
               </Row>
               <div>
                 <Row xs={1} lg={4} md={3} className="  g-4">
-                  {menudata.map((v) => (
+                  {five.map((v) => (
                     <Col key={v.menuid}>
                       <Card className="borderhead container-sm">
                         <Card.Img variant="top" src={v.imgName} />
@@ -89,19 +95,21 @@ function Homepage() {
                     </Col>
                   ))}
                   <Col>
-                    <Card className="borderhead container-sm ">
-                      <Card.Img
-                        variant="top"
-                        src="/finger_lickin.fc21c805.svg"
-                        className="finger p-4 "
-                      />
-                      <Card.Body className="cardbg">
-                        <Card.Title className="hometitle fw-bold   text-center">
-                          View All Menu <span className=" ">&#10230;</span>
-                        </Card.Title>
-                        <Card.Text></Card.Text>
-                      </Card.Body>
-                    </Card>
+                    <Link to="/menu" className='text-decoration-none '>
+                      <Card className="borderhead container-sm ">
+                        <Card.Img
+                          variant="top"
+                          src="/finger_lickin.fc21c805.svg"
+                          className="finger p-4 "
+                        />
+                        <Card.Body className="cardbg">
+                          <Card.Title className="hometitle fw-bold   text-center">
+                            View All Menu <span className=" ">&#10230;</span>
+                          </Card.Title>
+                          <Card.Text></Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Link>
                   </Col>
                 </Row>
               </div>
@@ -111,9 +119,8 @@ function Homepage() {
         </div>
       </div>
       <div>
-        <Periperi/>
         <Carouselpage />
-        
+
         <Footerbar />
       </div>
     </>

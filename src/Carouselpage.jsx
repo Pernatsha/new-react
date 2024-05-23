@@ -35,10 +35,7 @@ function Carouselpage() {
       <div className="bg-black mt-5">
         <div className="contant w-75 text-light text-xl-start text-center      container-md">
           <div>
-            <img
-              src="/kfc border.svg"
-              alt=""
-            />
+            <img src="/kfc border.svg" alt="" />
           </div>
           <div className="row mt-5 gap-xl-0 gap-4 ">
             <span
@@ -59,17 +56,17 @@ function Carouselpage() {
             <Slider {...settings}>
               <div>
                 <Card style={{ width: "18rem" }} className="">
-                  <Card.Img variant="top" src="/CAT158.jpg" />
+                  <Card.Img variant="top" src="/CHKZINGER.jpg" />
                   <Card.Body>
                     <Card.Title className="fs-4 fw-bold text-center  text-danger ">
-                      FREE 3PC STRIPS O...
+                      FREE CHICKEN...
                     </Card.Title>
                     <Card.Text
                       className="text-center overflow-hidden "
-                      style={{ height: "4rem" }}
+                      style={{ height: "3rem" }}
                     >
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      1 Pc free Chicken Zinger on a cart value of 499 or above
+                      on first order. Only for registered users.
                     </Card.Text>
                     <div className="d-flex justify-content-around  ">
                       <Link className="pt-1 text-dark ">View Details</Link>
@@ -85,17 +82,18 @@ function Carouselpage() {
               </div>
               <div>
                 <Card style={{ width: "18rem" }} className="">
-                  <Card.Img variant="top" src="/CAT158.jpg" />
+                  <Card.Img variant="top" src="/ADDCHK99.jpg" />
                   <Card.Body>
                     <Card.Title className="fs-4 fw-bold text-center  text-danger ">
-                      FREE 3PC STRIPS O...
+                      ADD 2 PC HOT N...
                     </Card.Title>
                     <Card.Text
                       className="text-center overflow-hidden"
-                      style={{ height: "4rem" }}
+                      style={{ height: "3rem" }}
                     >
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      Add 2 Pc Hot n Crispy Chicken at just Rs 99 on min cart
+                      value of Rs 499 or more. Applicable on 2nd & 3rd order for
+                      signed in user.
                     </Card.Text>
                     <div className="d-flex justify-content-around  ">
                       <Link className="pt-1 text-dark ">View Details</Link>
@@ -111,17 +109,17 @@ function Carouselpage() {
               </div>
               <div>
                 <Card style={{ width: "18rem" }} className="">
-                  <Card.Img variant="top" src="/CAT158.jpg" />
+                  <Card.Img variant="top" src="/BIGSAVE.jpg" />
                   <Card.Body>
                     <Card.Title className="fs-4 fw-bold text-center  text-danger ">
-                      FREE 3PC STRIPS O...
+                      UPTO RS 100 OFF O...
                     </Card.Title>
                     <Card.Text
                       className="text-center overflow-hidden"
-                      style={{ height: "4rem" }}
+                      style={{ height: "3rem" }}
                     >
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      Upto Rs 100 off on min cart value of Rs 699 or more .
+                      Applicable on 4th order onwards for signed in user.
                     </Card.Text>
                     <div className="d-flex justify-content-around  ">
                       <Link className="pt-1 text-dark ">View Details</Link>
@@ -137,17 +135,16 @@ function Carouselpage() {
               </div>
               <div>
                 <Card style={{ width: "18rem" }} className="">
-                  <Card.Img variant="top" src="/CAT158.jpg" />
+                  <Card.Img variant="top" src="/PHP75.jpg" />
                   <Card.Body>
                     <Card.Title className="fs-4 fw-bold text-center  text-danger ">
-                      FREE 3PC STRIPS O...
+                      GET FLAT RS.75 OF...
                     </Card.Title>
                     <Card.Text
                       className="text-center overflow-hidden"
-                      style={{ height: "4rem" }}
+                      style={{ height: "3rem" }}
                     >
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      Get flat Rs.75 off on a cart value of Rs.599 or above
                     </Card.Text>
                     <div className="d-flex justify-content-around  ">
                       <Link className="pt-1 text-dark ">View Details</Link>
@@ -163,17 +160,17 @@ function Carouselpage() {
               </div>
               <div>
                 <Card style={{ width: "18rem" }} className="">
-                  <Card.Img variant="top" src="/CAT158.jpg" />
+                  <Card.Img variant="top" src="/YAYPOP.jpg" />
                   <Card.Body>
                     <Card.Title className="fs-4 fw-bold text-center  text-danger ">
-                      FREE 3PC STRIPS O...
+                      FREE POPCORN...
                     </Card.Title>
                     <Card.Text
                       className="text-center overflow-hidden"
-                      style={{ height: "4rem" }}
+                      style={{ height: "3rem" }}
                     >
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      Free Popcorn (Med) on a cart value of 499 or more. Friday
+                      only.
                     </Card.Text>
                     <div className="d-flex justify-content-around  ">
                       <Link className="pt-1 text-dark ">View Details</Link>
@@ -189,17 +186,17 @@ function Carouselpage() {
               </div>
               <div>
                 <Card style={{ width: "18rem" }} className="">
-                  <Card.Img variant="top" src="/CAT158.jpg" />
+                  <Card.Img variant="top" src="/YAYCHKN.jpg" />
                   <Card.Body>
                     <Card.Title className="fs-4 fw-bold text-center  text-danger ">
-                      FREE 3PC STRIPS O...
+                      FREE 1PC CHICKEN...
                     </Card.Title>
                     <Card.Text
                       className="text-center overflow-hidden"
-                      style={{ height: "4rem" }}
+                      style={{ height: "3rem" }}
                     >
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      Free 1pc Chicken on a cart value of 499 or more. Friday
+                      only.
                     </Card.Text>
                     <div className="d-flex justify-content-around  ">
                       <Link className="pt-1 text-dark ">View Details</Link>
